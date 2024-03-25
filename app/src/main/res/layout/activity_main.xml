@@ -1,0 +1,107 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:backgroundTint="#75BC2B"
+    tools:context=".MainActivity"
+    android:padding="10dp">
+
+    <ImageView
+        android:id="@+id/logo"
+        android:layout_width="match_parent"
+        android:layout_height="68dp"
+        android:layout_marginTop="16dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/uth" />
+
+    <ImageView
+        android:id="@+id/fotoPersona"
+        android:layout_width="match_parent"
+        android:layout_height="159dp"
+        android:layout_below="@id/logo"
+        android:layout_marginTop="35dp"
+        android:textAlignment="center"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.215"
+        tools:srcCompat="@tools:sample/avatars" />
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/btnTomarFoto"
+        android:layout_width="326dp"
+        android:layout_height="48dp"
+        android:layout_below="@id/fotoPersona"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="10dp"
+        android:backgroundTint="#191818"
+        android:text="Tomar Foto" />
+    <!-- Text Input Layout -->
+
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:layout_width="398dp"
+        android:layout_height="88dp"
+        android:layout_below="@id/btnTomarFoto"
+        android:layout_marginTop="40dp"
+        android:hint="Ingrese Descripcion"
+        app:boxBackgroundColor="#FAF5F5"
+        app:boxStrokeColor="#100F0F"
+        app:boxStrokeWidth="2dp"
+        app:endIconMode="clear_text"
+        app:helperTextTextColor="#FF0000"
+
+        app:startIconTint="#131313">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/txtDescripcion"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:inputType="text"
+            app:startIconDrawable="@drawable/ic_person"
+            android:layout_marginTop="10dp"
+            app:boxBackgroundColor="#FAF5F5"
+            app:boxStrokeColor="#100F0F"
+            app:boxStrokeWidth="2dp"
+            app:endIconMode="clear_text"
+            app:helperTextTextColor="#FF0000"
+            app:startIconTint="#131313"/>
+
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_marginTop="26dp"
+        android:layout_marginBottom="45dp"
+        android:gravity="center">
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/btnGuardar"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_margin="5dp"
+            android:layout_weight="1"
+            android:backgroundTint="#0E0E0E"
+            android:onClick="RegistroData"
+            android:text="Guardar"
+            android:textColor="@color/white" />
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/btnVerFotos"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_margin="5dp"
+            android:layout_weight="1"
+            android:backgroundTint="#100F10"
+            android:text="Fotos Guardadas"
+            android:textColor="@color/white" />
+    </LinearLayout>
+
+
+</RelativeLayout>
